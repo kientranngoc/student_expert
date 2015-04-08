@@ -1,0 +1,41 @@
+<!-- page body -->
+<div class="page-body" id="page-body">
+
+  <div class="answer-list">
+	<div class="answer-item dark right">
+	  <div class="user-avatar"><img src="{{question.author.avatar}}"></div>
+	  <div class="text">
+		{{question.title}}
+		<img src="{{question.attachment?question.attachment:'/img/thumbnails/4x3.jpg'}}" class="answer-question-photo">
+	  </div>
+	</div>
+  </div>
+
+  <!--input form-->
+  <div class="input-form-wrap">
+	<div class="input-form">
+	  <div class="input-btn-camera{{attachment?' has-photo':''}}">
+	  	<button class="button" ng-file-select ng-model="files" ng-file-change="changeFile()" ng-multiple="false"><span><img src="/img/icons/camera@2x.png"></span></button>
+	  </div>
+	  <div class="input-text"><textarea rows="1" placeholder="Message" ng-model="answer_body"></textarea></div>
+	  <div class="input-btn-submit{{answer_body?' has-value':''}}"><button type="button" ontouchstart="" id="btnPost" ng-click="upload()">Post</button></div>
+	</div>
+  </div>
+
+</div>
+<!-- /page body -->
+
+<!-- Posting dialog-->
+<div class="modal fade" id="modalPosting" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-sm modal-message">
+	<div class="modal-content text-center">
+	  <div class="modal-header">
+		<h4 class="modal-title">Posting...</h4>
+	  </div>
+	  <div class="modal-body">
+		<p><img src="/img/icons/loader@2x.gif" width="32"></p>
+		<p class="text-muted">Please wait</p>
+	  </div>
+	</div>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<!-- page body -->
+<div class="page-body" id="page-body">
+  <div class="card-question-wrap" ng-show="state==1">
+	<div class="card-question relative">
+	  <!-- User Info -->
+	  <div class="user-info clearfix">
+		<img src="{{question.author.avatar}}" class="pull-left user-avatar" width="50" height="50">
+		<div class="pull-left user-name">{{question.author.name}} asked</div>
+	  </div>
+
+	  <!-- Question Info -->
+	  <div class="question-photo"><img src="{{question.attachment?question.attachment:'/img/thumbnails/4x3.jpg'}}"></div>
+	  <div class="question-text">{{question.title}}</div>
+
+	  <!-- Actions -->
+	  <div class="buttons clearfix">
+		<div class="pull-left text-center margin-h-20 margin-v-10">
+		  <button class="btn-skip" ng-click="skip()"></button>
+		  <div class="btn-label">Skip</div>
+		</div>
+		<div class="pull-right text-center margin-h-20 margin-v-10">
+		  <button class="btn-answer" ng-click="answer()"></button>
+		  <div class="btn-label">Answer</div>
+		</div>
+	  </div>
+
+	</div> <!-- /question -->
+
+	<div class="card-question-shadow text-center"><img src="/img/icons/CardBg@2x.png"></div>
+  </div>
+
+  <!--For loading only:-->
+  <div class="card-loading" ng-show="state==0">
+	<div class="text-center">
+	  <p><img src="/img/icons/loader@2x.gif" width="32"></p>
+	  <p>Loading new question...</p>
+	</div>
+  </div>
+  
+  <!--For notice only:-->
+  <div class="card-notice"  ng-show="state==-1">
+	<div class="text-center">
+	  <p><span class="fa fa-3x fa-ban text-danger"></span></p>
+	  <p>Oops, something went wrong.</p>
+	  <p>Can't load question. Please try it later...</p>
+	</div>
+  </div>
+
+</div>
+<!-- /page body -->
