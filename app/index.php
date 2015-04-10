@@ -13,7 +13,7 @@ function parseRequestHeaders() {
 }
 $headers = parseRequestHeaders();
 $authenKey = isset($headers["Authorization"])?$headers["Authorization"]:"";
-$authenKey = "RWAoBKENRBBgY0YuTG2z3nZMoYDsdjHxIQAfqXMf";
+//$authenKey = "RWAoBKENRBBgY0YuTG2z3nZMoYDsdjHxIQAfqXMf";
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html lang="en" ng-app="gotitAnswerApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
