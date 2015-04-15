@@ -25,12 +25,30 @@ angular.module('gotitAnswerApp')
         
         $scope.skip = function() {
         	console.log("skip");
-        	$route.reload();
+        	Question.skip(
+        		{qid:$scope.question.qid},
+        		function(response) {
+        			$route.reload();
+        		},
+        		function(error) {
+        			console.log("skip error");
+        			$route.reload();
+        		}
+        	);
         };
         
         $scope.answer = function() {
-        	console.log("answer");
-        	$location.path('/question');
+        	console.log("claim");
+        	Question.claim(
+        		{qid:$scope.question.qid},
+        		function(response) {
+        			$location.path('/question');
+        		},
+        		function(error) {
+        			console.log("claim error");
+        			$location.path('/question');
+        		}
+        	);
         }     
         
     }]);
