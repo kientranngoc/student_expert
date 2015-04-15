@@ -34,6 +34,9 @@ angular.module('gotitAnswerApp')
         };
         
         $scope.upload = function () {
+        	if(!$scope.answer_body) {
+        		return;
+        	}
         	var files = $scope.files;
 			if (files && files.length) {
 				$scope.uploading = true;
