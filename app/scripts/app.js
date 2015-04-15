@@ -23,7 +23,8 @@ config(['$routeProvider', "$httpProvider", function($routeProvider, $httpProvide
 	$httpProvider.defaults.headers.common = {
 		Authorization: GI_CONFIG.authKey,
 		TUClientPlatform: GI_CONFIG.clientInfo,
-		TUClientVersion: GI_CONFIG.clientVersion
+		TUClientVersion: GI_CONFIG.clientVersion,
+		Connection: "close"
 	}; 
     $httpProvider.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
 }]);
