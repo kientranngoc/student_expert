@@ -21,7 +21,7 @@ $authenKey = isset($headers["Authorization"])?$headers["Authorization"]:"";
 	<script type="text/javascript">                        
 		var GI_CONFIG = {
 			authKey : "<?= $authenKey ?>",
-			api_url : "http://api.tutoruniverse.net",
+			api_url : "https://api.tutoruniverse.com",
 			clientVersion : "1.9.0",
 			clientInfo : 10
 		};
