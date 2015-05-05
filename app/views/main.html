@@ -4,12 +4,12 @@
 	<div class="card-question relative">
 	  <!-- User Info -->
 	  <div class="user-info clearfix">
-		<img src="{{question.author.avatar}}" class="pull-left user-avatar" width="50" height="50">
+		<img ng-src="{{question.author.avatar}}" class="pull-left user-avatar" width="50" height="50">
 		<div class="pull-left user-name">{{question.author.name}} asked</div>
 	  </div>
 
 	  <!-- Question Info -->
-	  <div class="question-photo"><img src="{{question.attachment?question.attachment:'img/thumbnails/4x3.jpg'}}"></div>
+	  <div class="question-photo"><img ng-src="{{question.attachment?question.attachment:'img/thumbnails/4x3.jpg'}}"></div>
 	  <div class="question-text">{{question.title}}</div>
 
 	  <!-- Actions -->
@@ -41,8 +41,8 @@
   <div class="card-notice"  ng-show="state==-1">
 	<div class="text-center">
 	  <p><span class="fa fa-3x fa-ban text-danger"></span></p>
-	  <p>Oops, something went wrong.</p>
-	  <p>Can't load question. Please try it later...</p>
+	  <p>Oops, something went wrong!</p>
+	  <p>Please try again later...</p>
 	</div>
   </div>
 

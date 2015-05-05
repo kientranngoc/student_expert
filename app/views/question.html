@@ -3,10 +3,10 @@
 
   <div class="answer-list">
 	<div class="answer-item dark right">
-	  <div class="user-avatar"><img src="{{question.author.avatar}}"></div>
+	  <div class="user-avatar"><img ng-src="{{question.author.avatar}}"></div>
 	  <div class="text">
 		{{question.title}}
-		<img src="{{question.attachment?question.attachment:'img/thumbnails/4x3.jpg'}}" class="answer-question-photo">
+		<img ng-src="{{question.attachment?question.attachment:'img/thumbnails/4x3.jpg'}}" class="answer-question-photo">
 	  </div>
 	</div>
   </div>
