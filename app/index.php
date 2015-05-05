@@ -42,11 +42,11 @@ $authenKey = isset($headers["Authorization"])?$headers["Authorization"]:"";
 		};
 	</script>
 	    <!-- CSS Global -->  
-    <link href="/css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- Plugins -->
     <!-- Override plugins' css attributes -->
-    <link href="/css/plugins.css" rel="stylesheet">
+    <link href="css/plugins.css" rel="stylesheet">
 </head>
 <body>
 	<div ng-view></div>

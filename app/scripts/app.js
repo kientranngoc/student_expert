@@ -8,11 +8,11 @@ angular.module('gotitAnswerApp', [
 config(['$routeProvider', "$httpProvider", function($routeProvider, $httpProvider) {
   $routeProvider
 	.when('/', {
-		templateUrl: '/views/main.html',
+		templateUrl: 'views/main.html',
 		controller: 'MainCtrl'
 	})
 	.when('/question/', {
-		templateUrl: '/views/question.html',
+		templateUrl: 'views/question.html',
 		controller: 'QuestionCtrl'
 	})
 	.otherwise({

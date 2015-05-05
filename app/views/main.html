@@ -9,7 +9,7 @@
 	  </div>
 
 	  <!-- Question Info -->
-	  <div class="question-photo"><img src="{{question.attachment?question.attachment:'/img/thumbnails/4x3.jpg'}}"></div>
+	  <div class="question-photo"><img src="{{question.attachment?question.attachment:'img/thumbnails/4x3.jpg'}}"></div>
 	  <div class="question-text">{{question.title}}</div>
 
 	  <!-- Actions -->
@@ -26,13 +26,13 @@
 
 	</div> <!-- /question -->
 
-	<div class="card-question-shadow text-center"><img src="/img/icons/CardBg@2x.png"></div>
+	<div class="card-question-shadow text-center"><img src="img/icons/CardBg@2x.png"></div>
   </div>
 
   <!--For loading only:-->
   <div class="card-loading" ng-show="state==0">
 	<div class="text-center">
-	  <p><img src="/img/icons/loader@2x.gif" width="32"></p>
+	  <p><img src="img/icons/loader@2x.gif" width="32"></p>
 	  <p>Loading new question...</p>
 	</div>
   </div>
